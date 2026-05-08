@@ -1,4 +1,4 @@
-import { app, shell, BrowserWindow, ipcMain, Tray, Menu, nativeImage } from 'electron'
+import { app, shell, BrowserWindow, ipcMain, Tray, Menu } from 'electron'
 import { join } from 'path'
 import { electronApp, is } from '@electron-toolkit/utils'
 import Store from 'electron-store'
@@ -70,8 +70,7 @@ app.whenReady().then(() => {
   // --- CONFIGURAÇÃO DO MENU OCULTO (TRAY) ---
   
   // Cria a imagem ajustada para a bandeja (taskbar)
-  const trayIcon = nativeImage.createFromPath(icon).resize({ width: 16, height: 16 })
-  tray = new Tray(trayIcon)
+  tray = new Tray(icon)
   
   // Constrói o menu ao clicar com botão direito
 const contextMenu = Menu.buildFromTemplate([

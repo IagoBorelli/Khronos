@@ -24,3 +24,16 @@ body {
 .custom-scrollbar::-webkit-scrollbar-thumb:hover {
   background: #475569; /* slate-600 */
 }
+
+/* Inversão de cores para o Tema Claro */
+.light-theme {
+  --tw-bg-opacity: 1;
+  background-color: rgb(248 250 252 / var(--tw-bg-opacity)) !important; /* bg-slate-50 */
+}
+
+.light-theme .bg-background { background-color: #F8FAFC !important; }
+.light-theme .bg-surface { background-color: #FFFFFF !important; }
+.light-theme .text-textBase { color: #0F172A !important; }
+.light-theme .text-textMuted { color: #475569 !important; }
+.light-theme .border-slate-700\/50, 
+.light-theme .border-slate-600 { border-color: #E2E8F0 !important; }
